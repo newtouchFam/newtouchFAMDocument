@@ -1,0 +1,9 @@
+远程链接192.168.12.12 用户密码 ssc
+Tomcat路径：D:\workSpace\Tomcat6.0
+1.shutdown.bat 停止服务
+2.webapps目录下 删除原部署文件xxx.war和xxx文件夹
+3.将本地运行target的xxx.war打开；
+wfs.war\WEB-INF\classes\META-INF的目录；
+将proxool.xml删除，替换成测试的proxool-cs.xml，并重命名为proxool.xml
+4.将xxx.war复制到webapps下
+5.start.bat 重启服务

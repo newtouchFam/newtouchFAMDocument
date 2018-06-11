@@ -1,0 +1,9 @@
+生产环境的部署
+1.cd / 进去根目录
+2.cd /opt/soft/apache-tomcat-6.0.48
+3.先关闭服务器（tomcat的bin目录下）
+  关闭指令./shutdown.sh stop
+4.在webapps目录下.删除wfs文件夹 和 wfs.war两个文件（rm -f webapps/wfs.war ,rm -rf webapps/wfs）
+5.替换本地最新war包(rz 上传操作，选择要替换的xxx.war)（最新的war包需要替换wfs.war\WEB-INF\classes\META-INF中的proxool.xml文件，本地有备份生产和测试的版本，替换后还  原文件名proxool.xml）
+6.返回bin目录下
+  开启指令./startup.sh start
